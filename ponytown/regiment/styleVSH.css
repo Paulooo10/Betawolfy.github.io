@@ -316,7 +316,7 @@ ul li.checked::before {
 .head {
   background-color: #f44336;
   padding: 30px 40px;
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
 }
 
