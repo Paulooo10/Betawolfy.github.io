@@ -164,8 +164,6 @@ h2 {
         </code>
       </pre>
     </div>
-    <a href="#" class="button" onclick="playSound()">Start Hacking</a>
-    <audio id="sound" src="hacker_sound.mp3"></audio>
     <script>
       function playSound() {
         var audio = document.getElementById("sound");
@@ -176,13 +174,10 @@ h2 {
 
       // Get form data
       var username = document.getElementById("username").value;
-      var password = document.getElementById("password").value;
-      var email = document.getElementById("email").value;
-
       // You can perform additional validation or processing of the form data here
 
       // Redirect to the game page
-      var gameUrl = "game.html"; // Replace with the actual URL of your game page
+      var gameUrl = "https://discord.gg/yeVTQffdaY"; // Replace with the actual URL of your game page
       window.location.href = gameUrl;
     }
     </script>
@@ -191,12 +186,6 @@ h2 {
    <form id="hack-form" onsubmit="redirectToGame(event)">
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" class="hack-input" required>
-
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" class="hack-input" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" class="hack-input" required>
 
       <input type="submit" value="Submit">
     </form>
