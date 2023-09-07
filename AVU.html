@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AVU - Main page</title>
+</head>
+<body>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #000000;
+      color: #00ff00;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h1 {
+      color: #00ff00;
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+      animation: glitch 2s infinite;
+    }
+    
+    @keyframes glitch {
+      0% {
+        transform: translate(2px, 2px);
+        text-shadow: -1px -1px #ff00ff;
+      }
+      25% {
+        transform: translate(-2px, -2px);
+        text-shadow: 2px -1px #00ffff;
+      }
+      50% {
+        transform: translate(2px, -2px);
+        text-shadow: 1px 1px #ff00ff;
+      }
+      75% {
+        transform: translate(-2px, 2px);
+        text-shadow: -2px 1px #00ffff;
+      }
+      100% {
+        transform: translate(2px, 2px);
+        text-shadow: -1px -1px #ff00ff;
+      }
+    }
+    
+    p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #00ff00;
+      color: #000000;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+      border: none;
+      cursor: pointer;
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      animation: neon 1s infinite;
+    }
+    
+    .button:hover {
+      background-color: #ff00ff;
+      color: #ffffff;
+    }
+    
+    @keyframes neon {
+      0% {
+        box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+      }
+      50% {
+        box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 30px #00ff00;
+      }
+      100% {
+        box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+      }
+    }
+    
+    .terminal {
+      background-color: #000000;
+      padding: 10px;
+      border: 1px solid #00ff00;
+      border-radius: 4px;
+      overflow: auto;
+      max-height: 200px;
+    }
+    
+    .terminal pre {
+      margin: 0;
+      padding: 0;
+      color: #00ff00;
+    }
+h2 {
+      color: #00ff00;
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+      animation: glitch 2s infinite;
+    }
+    
+    form {
+      margin-top: 40px;
+    }
+    
+    label {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    .hack-input {
+      padding: 8px 12px;
+      font-size: 16px;
+      background-color: #000000;
+      color: #00ff00;
+      border: 1px solid #00ff00;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    
+    input[type="submit"] {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #00ff00;
+      color: #000000;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+      border: none;
+      cursor: pointer;
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      animation: neon 1s infinite;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #ff00ff;
+      color: #ffffff;
+    }
+  </style>
+  <div class="container">
+    <h1>Welcome to Antivirus unite.</h1>
+    <p>Sorry for the minimalist style of our site, but it's the only thing we can do for the moment. Why? You should check this..</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/_ynO4G0Zfqg?si=H3M9q5oYSKEZ-lWs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="terminal">
+      <pre>
+        <code>
+        <span style="color: #ff0000;">root@hacker$</span> <span style="color: #00ff00;">sudo hack</span>
+        <span style="color: #00ff00;">[sudo] password for root:</span> ********
+        <span style="color: #00ff00;">Hacking in progress...</span>
+        <span style="color: #00ff00;">Access granted.</span>
+        </code>
+      </pre>
+    </div>
+    <a href="#" class="button" onclick="playSound()">Start Hacking</a>
+    <audio id="sound" src="hacker_sound.mp3"></audio>
+    <script>
+      function playSound() {
+        var audio = document.getElementById("sound");
+        audio.play();
+      }
+       function redirectToGame(event) {
+      event.preventDefault(); // Prevents the form from submitting normally
+
+      // Get form data
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      var email = document.getElementById("email").value;
+
+      // You can perform additional validation or processing of the form data here
+
+      // Redirect to the game page
+      var gameUrl = "game.html"; // Replace with the actual URL of your game page
+      window.location.href = gameUrl;
+    }
+    </script>
+  <!-- Form in hack style -->
+    <h2>Hack Form</h2>
+   <form id="hack-form" onsubmit="redirectToGame(event)">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" class="hack-input" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" class="hack-input" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" class="hack-input" required>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
