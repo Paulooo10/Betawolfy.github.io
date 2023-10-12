@@ -208,7 +208,7 @@ h2 {
     <img src="https://forthebadge.com/images/badges/uses-html.svg" alt="uses HTML">
     <img src="https://forthebadge.com/images/badges/uses-js.svg" alt="uses JS">
     <img src="https://forthebadge.com/images/badges/uses-css.svg" alt="uses CSS">
-    <p>Sorry for the minimalist style of our site, but it's the only thing we can do for the moment. Why? You should check this..</p>
+    <p>Sorry for the minimalist style of our site, but it's the only thing we can do for the moment. Why? You should check <a href="./AVU/lore.html">this</a> and this video..</p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/_ynO4G0Zfqg?si=H3M9q5oYSKEZ-lWs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <div class="terminal">
       <pre>
@@ -222,31 +222,6 @@ h2 {
         </code>
       </pre>
     </div>
-    <script>
-      function playSound() {
-        var audio = document.getElementById("sound");
-        audio.play();
-      }
-       function redirectToGame(event) {
-      event.preventDefault(); // Prevents the form from submitting normally
-
-      // Get form data
-      var username = document.getElementById("username").value;
-      // You can perform additional validation or processing of the form data here
-
-      // Redirect to the game page
-      var gameUrl = "https://discord.gg/yeVTQffdaY"; // Replace with the actual URL of your game page
-      window.location.href = gameUrl;
-    }
-    </script>
-  <!-- Form in hack style -->
-    <!-- <h2>Join Form</h2>
-   <form id="hack-form" onsubmit="redirectToGame(event)">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" class="hack-input" required>
-
-      <input type="submit" value="Submit">
-    </form> -->
   </div>
 </body>
 </html>
